@@ -76,9 +76,9 @@
                                             <a title="Dashboard" href="{{ route('admin.dashboard') }}">Dashboard</a>
                                         </li>
                                         <li class="menu-item">
-                                            <a href="{{ route('Logout') }}" onclick="event.preventDefault();document.getElementById('logout-form').submit;">Logout</a>
+                                            <a href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">Logout</a>
                                         </li>
-                                        <form id="logout-form" action="{{ route('logout') }}" action="POST">
+                                        <form id="logout-form" method="POST" action="{{ route('logout') }}">
                                             @csrf
 
                                         </form>
@@ -91,20 +91,22 @@
                                         <li class="menu-item">
                                             <a title="Dashboard" href="{{ route('user.dashboard') }}">Dashboard</a>
                                         </li>
-                                        <form action="{{ route('logout') }}" action="POST">
-                                            @csrf
-                                            <li class="menu-item">
-                                                <a href="{{ route('Logout') }}" onclick="event.preventDefault();.closest('form').submit();">Logout</a>
-                                            </li>
-                                        </form>
-                                    </ul>
+                                        <li class="menu-item">
+                                            <a href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit;">Logout</a>
+                                        </li>
                                 </li>
-                                @endif
-                                @else
-                                <li class="menu-item"><a title="Register or Login" href="{{route('login')}}">Login</a></li>
-                                <li class="menu-item"><a title="Register or Login" href="{{route('register')}}">Register</a></li>
-                                @endauth
-                                @endif
+                                <form id="logout-form" action="{{ route('logout') }}" method="POST">
+                                    @csrf
+
+                                </form>
+                            </ul>
+                            </li>
+                            @endif
+                            @else
+                            <li class="menu-item"><a title="Register or Login" href="{{route('login')}}">Login</a></li>
+                            <li class="menu-item"><a title="Register or Login" href="{{route('register')}}">Register</a></li>
+                            @endif
+                            @endif
                             </ul>
                         </div>
                     </div>
