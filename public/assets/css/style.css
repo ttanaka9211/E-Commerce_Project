@@ -7332,3 +7332,54 @@ table.shop_attributes tbody {
 .text-red-600 {
     color: red;
 }
+
+.pl-4,
+.px-4 {
+    padding-left: 1.5rem !important;
+}
+
+.pb-2,
+.py-2 {
+    padding-bottom: 0.5rem !important;
+}
+
+.pt-2,
+.py-2 {
+    padding-top: 0.5rem !important;
+}
+
+.bg-white {
+    background-color: #fff !important;
+}
+
+.boder {
+    border: 1px solid #dee2e6 !important;
+}
+.bg-white {
+    background-color: #fff !important;
+}
+
+nav svg {
+    height: 20px;
+}
+
+svg {
+    overflow: hidden;
+    vertical-align: middle;
+}
+
+.wrap-pagination-info {
+    margin-top: 46px;
+    border-top: 1px solid #e6e6e6;
+    padding-top: 10px;
+}
+
+.wrap-pagination-info .hidden {
+    display: block !important;
+}
+.wrap-pagination-info .rounded-l-md {
+    margin-right: 5px;
+}
+.wrap-pagination-info .rounded-r-md {
+    margin-left: 5px;
+}
